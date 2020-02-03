@@ -1,0 +1,86 @@
+<html>
+<body>
+
+<?php
+
+
+define('DBSERVER',"172.16.210.2");
+define('DBUSER',"coursedb");
+define('DBPASS',"mypass");
+define('DATABASE',"coursedb");
+
+if (!$connection =  mysql_connect(DBSERVER, DBUSER, DBPASS))
+  die("Cannot connect");
+
+@mysql_select_db(DATABASE) or die( "Unable to select database");
+
+?>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (Windows NT 5.0; I) [Netscape]">
+   <title>Course Application Form</title>
+</head>
+<body background="back2.gif">
+
+<h3 align="center">Course Application Form</h3>
+<center>
+</center>
+
+<center>
+<h3>
+(for First-Come-First-Served Courses)</h3></center>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (Windows NT 5.0; I) [Netscape]">
+   <title>(for First-Come-First-Served Courses)</title>
+</head>
+
+<hr>
+<h3>Please fill in the form below to enroll :</h3>
+<hr>
+
+<form action="http://192.168.43.210/apply.php" method="get">
+<table width="100%" border="0">
+<tbody>
+
+<tr>
+<td width="30%" height="40">Course No To enroll:</td>
+<td width="70%" height="40"><input type="text" name="courseno" maxlength="4"></td></tr>
+
+<tr>
+<td width="30%" height="40">Name:</td>
+<td width="70%" height="40"><input type="text" name="name" required maxlength="30"></td></tr>
+
+<tr>
+<td width="30%" height="40">Staff/student ID: </td>
+<td width="70%" height="40"><input type="text" name="stid" required maxlength="15"></td></tr>
+
+<tr>
+<td width="30%" height="40">HKID (Just the 6 digits): </td>
+<td width="70%" height="40"><input type="text" name="hkid" required maxlength="6" max="999999" min="100000"></td></tr>
+
+<tr>
+<td width="30%" height="40">E-mail address: </td>
+<td width="70%" height="40"><input type="email" name="email" required maxlength="30"></td></tr>
+
+<tr>
+<td width="30%" height="40">Contact Tel: </td>
+<td width="70%" height="40"><input type="text" name="tel" required maxlength="15"></td></tr>
+</tbody></table>
+<hr>
+<br>
+<input type="submit"></center>
+<input type="reset"></center>
+</form>
+<br>
+<a href="http://192.168.43.210/course.php">Return to Main Page</a>
+
+
+  
+
+
+
+
+</body>
+</html>
+
+
